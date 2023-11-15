@@ -1,0 +1,10 @@
+name: SonarQube Code Quality Check
+on: push
+
+jobs:
+  call-code-quality-workflow:
+    uses: CICD-test-nable/Reusable-workflow-for-java/.github/workflows/main.yml@main
+    secrets:
+      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+      SONAR_PROJECT_KEY: ${{ github.event.repository.name }}
