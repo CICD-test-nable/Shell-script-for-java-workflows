@@ -31,7 +31,7 @@ fi
      cp ../workflow.yml .github/workflows/
      git add .
      git commit -m "Add workflow file"
-     git push -u origin spims
+     git push -u origin $branch_name
      cd ..
 
 else
