@@ -1,6 +1,5 @@
 name: SonarQube Code Quality Check
 on: push
-    pull-request
 
 jobs:
   call-code-quality-workflow:
