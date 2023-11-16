@@ -1,6 +1,7 @@
 #!/bin/bash
 
 ORG_NAME="CICD-test-nable"
+branch_name="spims"
 
 repos=$(gh repo list -q '.[].name' --json name -L 400 $ORG_NAME)
 
@@ -15,9 +16,18 @@ for repo in $repos; do
 if [[ "$result" == "JAVA" ]]
 
 then
+
+if git show-ref --quiet refs/remotes/origin/"$branch_name"; then
+    echo "Branch $branch_name found"
+else                                                            
+    echo "...................Creating $branch_name ....................."
+    git branch $branch_name
+fi                                                                               
+Branch spims exists in your remote repository.
+
     cd $repo
-     echo "crating spims barnch"
-     git checkout -b spims
+     echo ".....................Switching to $branch_name ....................."
+     git checkout $branch_name
      mkdir -p .github/workflows
      cp ../workflow.yml .github/workflows/
      git add .
