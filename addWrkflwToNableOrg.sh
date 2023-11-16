@@ -23,7 +23,6 @@ else
     echo "...................Creating $branch_name ....................."
     git branch $branch_name
 fi                                                                               
-Branch spims exists in your remote repository.
 
     cd $repo
      echo ".....................Switching to $branch_name ....................."
