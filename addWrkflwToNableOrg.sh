@@ -24,7 +24,7 @@ then
      git commit -m "Add workflow file"
      git push -u origin spims
      cd ..
-i
+
 else
     echo "This is a non-java repository"
 fi
