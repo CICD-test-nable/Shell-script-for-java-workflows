@@ -16,8 +16,8 @@ if [[ "$result" == "JAVA" ]]
 
 then
     cd $repo
+     echo "crating spims barnch"
      git checkout -b spims
-     echo "crated spims barnch"
      mkdir -p .github/workflows
      cp ../workflow.yml .github/workflows/
      git add .
