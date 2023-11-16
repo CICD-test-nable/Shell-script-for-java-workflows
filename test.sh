@@ -3,7 +3,7 @@
 ORG_NAME="CICD-test-nable"
 #ORG_NAME="n-ablePrivateLimitedColomboSriLanka "
 
-repos=$(gh repo list -q '.[].name' --json name -L 400 $ORG_NAME)
+repos=$(gh repo list -q '.[].name' --json name -L 5 $ORG_NAME)
 
 for repo in $repos; do
 
