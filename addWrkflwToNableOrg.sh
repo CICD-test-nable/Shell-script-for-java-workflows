@@ -1,9 +1,10 @@
 #!/bin/bash
 
-ORG_NAME="CICD-test-nable"
-branch_name="spims"
+#ORG_NAME="CICD-test-nable"
+ORG_NAME="n-ablePrivateLimitedColomboSriLanka"
+branch_name="dev_protected"
 
-repos=$(gh repo list -q '.[].name' --json name -L 400 $ORG_NAME)
+repos=$(gh repo list -q '.[].name' --json name -L 5 $ORG_NAME)
 
 for repo in $repos; do
 
@@ -28,7 +29,7 @@ fi
      echo ".....................Switching to $branch_name ....................."
      git checkout $branch_name
      mkdir -p .github/workflows
-     cp ../workflow.yml .github/workflows/
+     cp ../workflow2.yml .github/workflows/
      git add .
      git commit -m "Add workflow file"
      git push -u origin $branch_name
