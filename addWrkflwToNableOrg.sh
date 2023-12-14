@@ -1,6 +1,5 @@
 #!/bin/bash
 
-#ORG_NAME="CICD-test-nable"
 ORG_NAME="n-ablePrivateLimitedColomboSriLanka"
 branch_name="dev_protected"
 
