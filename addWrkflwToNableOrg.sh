@@ -2,6 +2,7 @@
 
 ORG_NAME="n-ablePrivateLimitedColomboSriLanka"
 branch_name="dev_protected"
+WORKFLOW_FILE="workflowNable.yml"
 
 repos=$(gh repo list -q '.[].name' --json name -L 5 $ORG_NAME)
 
@@ -28,7 +29,7 @@ fi
      echo ".....................Switching to $branch_name ....................."
      git checkout $branch_name
      mkdir -p .github/workflows
-     cp ../workflowNable.yml .github/workflows/
+     cp ../$WORKFLOW_FILE .github/workflows/
      git add .
      git commit -m "Add workflow file"
      git push -u origin $branch_name
