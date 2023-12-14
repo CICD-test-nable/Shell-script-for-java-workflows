@@ -5,7 +5,7 @@ on:
 
 jobs:
   call-code-quality-workflow:
-    uses: CICD-test-nable/Reusable-workflow-for-java/.github/workflows/main.yml@main
+    uses: n-ablePrivateLimitedColomboSriLanka/Reusable-workflow-for-Java/.github/workflows/reusable.yml@master
     secrets:
       SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
