@@ -29,7 +29,7 @@ fi
      echo ".....................Switching to $branch_name ....................."
      git checkout $branch_name
      mkdir -p .github/workflows
-     cp ../workflow2.yml .github/workflows/
+     cp ../workflowNable.yml .github/workflows/
      git add .
      git commit -m "Add workflow file"
      git push -u origin $branch_name
