@@ -4,7 +4,7 @@ ORG_NAME="n-ablePrivateLimitedColomboSriLanka"
 branch_name="dev_protected"
 WORKFLOW_FILE="SonarWorkflowNable.yml"
 
-repos=$(gh repo list -q '.[].name' --json name -L 5 $ORG_NAME)
+repos=$(gh repo list -q '.[].name' --json name -L 400 $ORG_NAME)
 
 for repo in $repos; do
 
