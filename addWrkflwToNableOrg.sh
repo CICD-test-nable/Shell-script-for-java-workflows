@@ -2,7 +2,7 @@
 
 ORG_NAME="n-ablePrivateLimitedColomboSriLanka"
 branch_name="dev_protected"
-WORKFLOW_FILE="workflowNable.yml"
+WORKFLOW_FILE="SonarWorkflowNable.yml"
 
 repos=$(gh repo list -q '.[].name' --json name -L 5 $ORG_NAME)
 
